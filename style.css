@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: raleway;
+    src: url('./assets/fonts/Raleway.woff2');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    grid-template-rows: auto auto auto;
+}
+.containerA{
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-grid;
+    grid-template-columns: 50% 50%; 
+    justify-content: center;
+    height: 650px;
+}
+.itemA{
+    grid-column: 1;
+    background: #fff;
+}
+#logo{
+    width: 15%;
+    height: 13%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+#titleA{
+    font-family: raleway;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 55px;
+    color: #000000;
+    z-index: 1;
+    position: relative;
+    top: 10%;
+    left: 39.5%;
+}
+#textA{
+    font-family: raleway;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+    color: #383535;
+    z-index: 1;
+    position: relative;
+    top: 10%;
+    left: 46%;
+}
+.itemB{
+    grid-column: 2;
+    background: linear-gradient(180deg, #377781 0%, 
+    rgba(46, 183, 204, 0.685) 99.61%, 
+    rgba(114, 159, 166, 0.706077) 100%, rgba(255, 255, 255, 0) 100%),
+    url('./assets/images/back.jpg');
+    background-repeat:no-repeat; 
+    background-size: 100% 100%;
+}
+#contact{
+    text-decoration: none;
+    background: #fff;
+    color: #000000;
+    padding: 15px;
+    font-size: 8px;
+    font-family: raleway;
+    font-weight: 600;
+    margin-left: 60%;
+}
+#menu{
+    background: transparent;
+    border: 0 solid transparent;
+    transform: rotate(-180deg);
+    position: relative;
+    width: 38px;
+    height: 59px;
+    left: 20%;
+    top: 12px;
+}
+#titleB{
+    font-family: raleway;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 55px;
+    color: #000000;
+    z-index: 1;
+    position: relative;
+    top: 40%;
+    right: 37%;
+}
+#textB{
+    font-family: raleway;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 18px;
+    color: #383535;
+    z-index: 1;
+    position: relative;
+    top: 40%;
+    right: 30%;
+}
