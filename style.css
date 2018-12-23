@@ -1,33 +1,54 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-html{
-    scroll-behavior: smooth;
-}
 @font-face {
     font-family: raleway;
     src: url('./assets/fonts/Raleway.woff2');
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+:root{
+    --swC1: #377781;
+    --swC2: #0692A3;
+    --swC3: #86E2EF;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: raleway;
+    box-sizing: border-box;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+    /* margin: 0;
+    padding: 0; */
+}
 .container{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     justify-content: center;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .containerA{
     grid-column: 1;
     grid-row: 1;
     display: inline-grid;
-    grid-template-columns: 50% 50%; 
+    grid-template-columns: 1fr 1fr; 
     justify-content: center;
     height: 650px;
+}
+.topNav{
+    position: top;
+    top: 0;
+    width: 100%;
+    /* z-index: 1; */
+    background: transparent;
 }
 .itemA{
     grid-column: 1;
     background: #fff;
+    background: url('./assets/images/circles.svg');
+    background-repeat: no-repeat;
+    background-size: 70% 80%;
 }
 #logo{
     width: 15%;
@@ -41,7 +62,7 @@ html{
     font-weight: normal;
     line-height: normal;
     font-size: 55px;
-    color: #000000;
+    color: #272727;
     z-index: 1;
     position: relative;
     top: 10%;
@@ -71,7 +92,7 @@ html{
 #contact{
     text-decoration: none;
     background: #fff;
-    color: #000000;
+    color: #272727;
     padding: 15px;
     font-size: 8px;
     font-family: raleway;
@@ -94,7 +115,7 @@ html{
     font-weight: normal;
     line-height: normal;
     font-size: 55px;
-    color: #000000;
+    color: #272727;
     z-index: 1;
     position: relative;
     top: 50%;
@@ -113,67 +134,25 @@ html{
     right: 30%;
 }
 
-@media only screen and (max-width: 500px){
-    /* .container{
+@media only screen and (max-width: 425px){
+    .container{
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         justify-content: center;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: 1fr 1fr 1fr;
     }
-    .containerA{
-        grid-column: 1;
-        grid-row: 1;
-        display: inline-grid;
-        grid-template-columns: auto 400px; 
-        justify-content: center;
-        height: 650px;
-    }
-    .itemA{
-        grid-column: 1;
-        background: #fff;
-    } */
     #logo{
         width: 12%;
         height: 8%;
-        position: relative;
-        top: 2%;
-        left: 65%;
-    }
-    #titleA{
-        width: 600px;
-        font-family: raleway;
-        font-style: normal;
-        font-weight: normal;
-        line-height: normal;
-        font-size: 32px;
-        color: #000000;
-        z-index: 1;
-        position: relative;
-        top: 25%;
-        left: 70%;
-    }
-    #textA{
-        width: 300px;
-        font-family: raleway;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        font-size: 12px;
-        color: #383535;
-        z-index: 1;
-        position: relative;
-        top: 25%;
-        left: 75%;
+        margin-left: 18%;
     }
     #contact{
         text-decoration: none;
         background: #fff;
-        color: #000000;
-        padding: 15px;
+        color: #272727;
         font-size: 8px;
         font-family: raleway;
         font-weight: 600;
-        margin-left: 45%;
     }
     #menu{
         background: transparent;
@@ -185,6 +164,50 @@ html{
         left: 20%;
         top: 12px;
     }
+    .containerA{
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: auto; 
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+    .itemA{
+        grid-column: 1;
+        grid-row: 1;
+        background-size: 60% 70%;
+        background-position: 15px;
+    }
+    #titleA{
+        width: 600px;
+        font-family: raleway;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 32px;
+        color: #272727;
+        z-index: 1;
+        position: relative;
+        top: 10%;
+        left: 24%;
+    }
+    #textA{
+        width: 300px;
+        font-family: raleway;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 14px;
+        color: #383535;
+        z-index: 1;
+        position: relative;
+        top: 12%;
+        left: 26%;
+    }
+    .itemB{
+        grid-column: 1;
+        grid-row: 2;
+    }
     #titleB{
         /* width: 600px; */
         font-family: raleway;
@@ -192,11 +215,11 @@ html{
         font-weight: normal;
         line-height: normal;
         font-size: 32px;
-        color: #000000;
+        color: #272727;
         z-index: 1;
         position: relative;
-        top: 50%;
-        right: 20%;
+        top: 35%;
+        left: 26%;
     }
     #textB{
         width: 250px;
@@ -208,7 +231,54 @@ html{
         color: #383535;
         z-index: 1;
         position: relative;
-        top: 50%;
-        right: 12%;
+        top: 36%;
+        left: 28%;
     }
+    @media only screen and (max-width: 325px){
+        #logo{
+            width: 12%;
+            height: 8%;
+            margin-left: 28%;
+        }
+        #titleA{
+            width: 600px;
+            font-family: raleway;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 32px;
+            color: #272727;
+            z-index: 1;
+            position: relative;
+            top: 10%;
+            left: 30%;
+        }
+        #textA{
+            width: 300px;
+            font-family: raleway;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            font-size: 14px;
+            color: #383535;
+            z-index: 1;
+            position: relative;
+            top: 12%;
+            left: 32%;
+        }
+    }
+}
+.containerB{
+    grid-column: 1;
+    grid-row: 2;
+    background: url('./assets/images/build.svg');
+    text-align: end;
+}
+.titleC{
+    font-family: raleway;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 55px;
+    color: #377781;
 }
