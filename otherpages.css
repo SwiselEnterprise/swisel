@@ -1,0 +1,138 @@
+@font-face {
+    font-family: raleway;
+    src: url('./assets/fonts/Raleway.woff2');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root{
+    --swC1: #377781;
+    --swC2: #0692A3;
+    --swC3: #86E2EF;
+    --black: #272727;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: raleway;
+    box-sizing: border-box;
+    /* text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); */
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+    /* margin: 0;
+    padding: 0; */
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* justify-items: center; */
+}
+/* --------------------NAVIGATION---------------------- */
+.jumbo{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+#home{
+    grid-column: 1;
+    padding: 8%;
+    font-size: 30px;
+    color: darkslategray;
+    width: 300px;
+}
+#backBtn{
+    transform: rotate(180deg);
+    position: relative;
+    top: -10%;
+}
+.menu ul{
+    grid-column: 2;
+    width: 1000px;
+    padding: 5px;
+    margin-left: 15%;
+    letter-spacing: 0.1em;
+    list-style: none;
+    
+}
+.menu li{
+    display: inline;
+    margin: 2%;
+}
+.menu a{
+    text-decoration: none;
+    color: var(--swC1);
+    font-size: 14px;
+    font-weight: 500px;
+    padding: 8px;
+    border-top:0 solid transparent;
+    border-right: 0 solid transparent;
+    border-left: 0 solid transparent;
+}
+[aria-controls="menu-list"]{
+    display: none;
+}
+.active{
+    border-top:0 solid transparent;
+    border-right: 0 solid transparent;
+    border-left: 0 solid transparent;
+    border-bottom: 4px solid var(--swC2);
+}
+
+/* --------------------- Main Content ----------------------------- */
+.mainA{
+    grid-column: 1/-1;
+    height: 500px;
+    margin-top: 5%;
+    background: linear-gradient(180deg, #377781 0%, 
+    rgba(46, 183, 204, 0.685) 99.61%, 
+    rgba(114, 159, 166, 0.706077) 100%, rgba(255, 255, 255, 0) 100%),
+    url('./assets/images/lordcheta1.jpg'); 
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position:bottom left;
+    background-attachment: fixed;
+}
+.titleA{
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 55%;
+    font-size: 50px;
+    font-weight: 300;
+}
+#sw-bold{
+    font-size: 70px;
+    color: var(--swC1);
+    letter-spacing: 0.25em;
+}
+.textA{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    color: darkslategray;
+    margin-top: -1%;
+    margin-left: 50%;
+    letter-spacing: 0.07em;
+}
+.mainB{
+    grid-column: 1/-1;
+    height: 600px;
+    background: url('./assets/images/web.svg');
+    background-repeat: no-repeat;
+    background-size: 50% 70%; 
+    background-position: bottom right;
+}
+.textB{
+    text-align: center;
+    margin-top: 5%;
+    padding: 100px;
+    font-size: 25px;
+    color: darkslategray;
+}
