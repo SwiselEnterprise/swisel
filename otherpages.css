@@ -86,7 +86,7 @@ a{
     border-bottom: 4px solid var(--swC2);
 }
 
-/* --------------------- Main Content ----------------------------- */
+/* --------------------- About Main Content ----------------------------- */
 .mainA{
     grid-column: 1/-1;
     height: 500px;
@@ -222,6 +222,28 @@ a{
     width: 30px;
     height: 30px;
 }
+
+/* ----------------Services Page Main Content----------------- */
+.serviceA{
+    grid-column: 1/-1;
+    height: 500px;
+    margin-top: 5%;
+    background: url('./assets/images/agreement.svg'); 
+    background-repeat: no-repeat;
+    background-size: 50% 50%; 
+    background-position:left center;
+}
+#sTextA{
+    text-align: start;
+    width: 500px;
+    margin-top: 10%;
+    margin-left: 45%;
+    /* padding: 0 100px 0 250px; */
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--swC1);
+}
+/* ----------------under construction------------------------ */
 .uc{
     grid-column: 1/-1;
     margin-top: 20%;

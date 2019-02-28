@@ -271,6 +271,10 @@ html{
     grid-column: 3;
     padding: 20px;
 }
+#company > p > a{
+    color: var(--swC2);
+    text-decoration: none;
+}
 .sm-icons{
     width: 30px;
     height: 30px;
