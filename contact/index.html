@@ -20,6 +20,44 @@
             </ul>
         </nav>
     </header>
-    <p class="uc">Under Construction. Please Check Back In a Few Hours</p>
+    <!-- <p class="uc">Under Construction. Please Check Back In a Few Hours</p> -->
+    <main class="contact-main">
+        <section id="contact-section">
+            <h1 id="contact-title">Got something for us<span style="color: #86E2EF">?</span></h1>
+            <p id="contact-slogan">we love a good challenge</p>
+
+            <form>
+                <input class="contact-input" type="text" name="" id="fullname" placeholder="Full Name" required><br><br><br>
+                <input class="contact-input" type="text" name="" id="email" placeholder="Email" required><br><br><br>
+                <input class="contact-input" type="text" name="" id="message" placeholder="Message" required><br><br><br>
+
+                <input id="send" type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+    
+    <script>
+        let sendMail = (email, senderName, body) => {
+            window.open(`mailto:jenniferolibie@gmail.com?subject=Mail from portfolio page by ${senderName}&body=${body}`);
+        }
+        
+        document.querySelector('#send').addEventListener('click', (e) => {
+            e.preventDefault();
+
+            let email = document.querySelector('#email').value;
+            let senderName = document.querySelector('#fullname').value;
+            let body = document.querySelector('#message').value;
+
+            // console.log(email, senderName, body);
+
+            if(!email || !senderName || !body){
+                alert('Please Fill Out all fields properly');
+                return;
+            }
+            sendMail(email, senderName, body);
+        });
+        
+    </script>
+
 </body>
 </html>

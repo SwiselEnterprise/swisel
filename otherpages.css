@@ -243,6 +243,91 @@ a{
     font-weight: 200;
     color: var(--swC1);
 }
+
+/* --------------------Contact Page Styles------------------------ */
+.contact-main{
+    display: grid;
+    grid-template-columns:auto;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+#contact-title{
+    color: var(--swC1);
+    font-size: 43px;
+    font-style: normal;
+    font-weight: bolder;
+}
+#contact-slogan{
+    color: var(--swC2);
+    margin-top: -7%;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 0.7 
+}
+.contact-input{
+    width: 400px;
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 1px solid var(--swC2);
+    padding: 15px;
+    color: var(--swC2);
+    outline: 0;
+}
+#fullname{
+    background: url('./assets/images/man-user.svg') no-repeat scroll 7px 7px;
+    padding-left:50px; 
+}
+#email{
+    background: url('./assets/images/contact.svg') no-repeat 7px 7px;
+    padding-left: 50px;
+}
+#message{
+    background: url('./assets/images/pen.svg') no-repeat 7px 7px;
+    padding-left: 50px;
+}
+#send{
+    margin-top: 5%;
+    /* padding: 5px; */
+    color: var(--swC1);
+    font-family: poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bolder;
+    letter-spacing: 0.07em;
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 4px solid var(--swC1);
+    background: transparent;
+    outline: 0;
+    text-align: right;
+    cursor: pointer;
+    margin-left: 80%;
+}
+@media only screen and (max-width: 500px){
+    #contact-title{
+        font-size: 23px;
+        margin-top: 120px;
+    } 
+    .contact-input{
+        width: 200px;
+        font-size: 10px;
+        padding: 10px; 
+    }
+    #fullname{
+        background-size: 20px 20px
+    }
+    #email{
+        background-size: 20px 20px
+    }
+    #message{
+        background-size: 20px 20px
+    }
+    #send{
+        font-size: 10px;
+    }
+} 
 /* ----------------under construction------------------------ */
 .uc{
     grid-column: 1/-1;
