@@ -278,7 +278,7 @@ a{
     background: url('./assets/images/man-user.svg') no-repeat scroll 7px 7px;
     padding-left:50px; 
 }
-#email{
+#inputEmail{
     background: url('./assets/images/contact.svg') no-repeat 7px 7px;
     padding-left: 50px;
 }
@@ -318,7 +318,7 @@ a{
     #fullname{
         background-size: 20px 20px
     }
-    #email{
+    #inputEmail{
         background-size: 20px 20px
     }
     #message{
